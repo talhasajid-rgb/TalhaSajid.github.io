@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talha Sajid | CFD Engineer Portfolio</title>
+  <meta name="description" content="Professional CFD Engineer portfolio for Talha Sajid, focused on computational fluid dynamics, numerical methods, heat transfer, reactive flow, and scientific computing." />
+  <style>
+    :root {
+      --ink: #07111f;
+      --ink-2: #0d1d33;
+      --panel: #101f33;
+      --panel-2: #132842;
+      --line: rgba(255,255,255,.12);
+      --muted: #9fb3c8;
+      --text: #e8f2f8;
+      --soft: #c9d9e4;
+      --accent: #2fd3ff;
+      --accent-2: #ffb84d;
+      --white: #fff;
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius: 22px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(47,211,255,.16), transparent 34rem),
+        radial-gradient(circle at 80% 8%, rgba(255,184,77,.11), transparent 28rem),
+        linear-gradient(135deg, #06101d 0%, #0a1728 55%, #0f2035 100%);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .nav {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: blur(20px);
+      background: rgba(6,16,29,.78);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.02em; }
+    .brand-mark { width: 40px; height: 40px; border-radius: 14px; display: grid; place-items: center; color: #04111c; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 10px 25px rgba(47,211,255,.22); }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+    .nav-links a { padding: 9px 12px; color: var(--soft); border-radius: 999px; font-size: 14px; }
+    .nav-links a:hover { background: rgba(255,255,255,.08); color: var(--white); }
+    .hero { padding: 80px 0 54px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 7px 12px; border: 1px solid rgba(47,211,255,.35); background: rgba(47,211,255,.08); border-radius: 999px; color: #abedff; font-size: 13px; font-weight: 700; letter-spacing: .02em; }
+    h1 { font-size: clamp(42px, 7vw, 82px); line-height: .96; letter-spacing: -.06em; margin: 22px 0 18px; }
+    .hero h1 span { display: block; color: transparent; background: linear-gradient(90deg, var(--white), #83e8ff 55%, var(--accent-2)); -webkit-background-clip: text; background-clip: text; }
+    .lead { color: var(--soft); font-size: clamp(17px, 2.1vw, 22px); max-width: 780px; }
+    .hero-actions, .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 46px; padding: 12px 18px; border-radius: 999px; font-weight: 800; border: 1px solid transparent; transition: transform .2s ease, background .2s ease, border .2s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #74e4ff); color: #04101a; box-shadow: 0 16px 36px rgba(47,211,255,.25); }
+    .btn-secondary { background: rgba(255,255,255,.08); color: var(--white); border-color: var(--line); }
+    .btn-ghost { color: var(--accent); border-color: rgba(47,211,255,.3); background: rgba(47,211,255,.07); }
+    .btn-disabled { opacity: .62; cursor: not-allowed; }
+    .hero-card { position: relative; min-height: 520px; border-radius: 34px; background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.035)); border: 1px solid var(--line); box-shadow: var(--shadow); padding: 18px; overflow: hidden; }
+    .profile-frame { height: 360px; border-radius: 28px; overflow: hidden; background: #dbe3e7; border: 1px solid rgba(255,255,255,.18); }
+    .profile-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 38%; }
+    .hero-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+    .metric { border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.06); padding: 12px; }
+    .metric strong { display:block; font-size: 20px; color: var(--white); }
+    .metric span { display:block; color: var(--muted); font-size: 12px; line-height: 1.35; }
+    section { padding: 72px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
+    .section-kicker { color: var(--accent); font-size: 12px; text-transform: uppercase; letter-spacing: .16em; font-weight: 900; }
+    h2 { font-size: clamp(30px, 4vw, 48px); line-height: 1.05; margin: 7px 0 0; letter-spacing: -.04em; }
+    .section-copy { color: var(--muted); max-width: 640px; }
+    .panel { background: rgba(255,255,255,.055); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 14px 42px rgba(0,0,0,.18); }
+    .about-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 22px; }
+    .about-card { padding: 26px; }
+    .about-card p { color: var(--soft); margin: 0 0 16px; }
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .tag { padding: 8px 10px; border-radius: 999px; background: rgba(47,211,255,.08); color: #c7f4ff; border: 1px solid rgba(47,211,255,.16); font-size: 13px; font-weight: 700; }
+    .info-list { display: grid; gap: 12px; }
+    .info-row { padding: 14px 16px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.04); }
+    .info-row small { color: var(--muted); display: block; margin-bottom: 3px; }
+    .info-row strong { color: var(--white); }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .skill-card { padding: 20px; }
+    .skill-card h3 { margin: 0 0 10px; font-size: 18px; }
+    .skill-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .project-card { overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+    .project-image { position: relative; aspect-ratio: 16/9; background: #eef3f5; overflow: hidden; }
+    .project-image img { width: 100%; height: 100%; object-fit: contain; object-position: center; padding: 10px; filter: saturate(.98) contrast(1.02); }
+    .project-badge { position: absolute; top: 14px; left: 14px; padding: 6px 10px; border-radius: 999px; background: rgba(5,15,27,.82); border: 1px solid rgba(255,255,255,.2); color: var(--white); font-size: 12px; font-weight: 800; }
+    .project-body { padding: 22px; }
+    .project-body h3 { margin: 0 0 8px; font-size: 22px; line-height: 1.16; }
+    .project-body p { color: var(--soft); margin: 0 0 14px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+    .meta span { font-size: 12px; color: var(--soft); border: 1px solid var(--line); background: rgba(255,255,255,.04); padding: 6px 9px; border-radius: 999px; }
+    .case { margin-bottom: 18px; overflow: hidden; }
+    .case summary { cursor: pointer; padding: 22px 24px; list-style: none; font-weight: 900; font-size: 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .case summary::-webkit-details-marker { display: none; }
+    .case summary::after { content: '+'; width: 34px; height: 34px; border-radius: 999px; display: grid; place-items: center; background: rgba(47,211,255,.1); color: var(--accent); border: 1px solid rgba(47,211,255,.2); }
+    .case[open] summary::after { content: '–'; }
+    .case-content { border-top: 1px solid var(--line); padding: 24px; }
+    .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+    .case-text h4 { margin: 18px 0 8px; color: var(--accent); }
+    .case-text p, .case-text li { color: var(--soft); }
+    .case-text ul { padding-left: 20px; }
+    .image-pair { display: grid; gap: 14px; }
+    .figure { background: rgba(255,255,255,.04); border: 1px solid var(--line); border-radius: 18px; padding: 10px; }
+    .figure img { width: 100%; border-radius: 12px; background: #fff; }
+    .figure figcaption { margin-top: 9px; font-size: 12px; color: var(--muted); }
+    .timeline { display: grid; gap: 16px; }
+    .timeline-item { display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 20px; }
+    .time { color: var(--accent); font-weight: 900; font-size: 14px; }
+    .timeline-item h3 { margin: 0 0 6px; }
+    .timeline-item p, .timeline-item li { color: var(--soft); }
+    .timeline-item ul { margin: 10px 0 0; padding-left: 20px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .contact-single { grid-template-columns: minmax(0, 760px); }
+    .contact-card { padding: 26px; }
+    .contact-card h3 { margin-top: 0; }
+    .contact-card p { color: var(--soft); }
+    .source-note { font-size: 13px; color: var(--muted); padding: 18px; border-left: 3px solid var(--accent); background: rgba(47,211,255,.06); border-radius: 16px; }
+    footer { padding: 34px 0 60px; color: var(--muted); border-top: 1px solid var(--line); }
+    @media (max-width: 960px) {
+      .hero-grid, .about-grid, .case-grid, .contact-grid { grid-template-columns: 1fr; }
+      .skills-grid, .project-grid { grid-template-columns: 1fr; }
+      .hero-card { min-height: auto; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(var(--max), calc(100% - 24px)); }
+      .nav-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .hero { padding-top: 46px; }
+      .hero-metrics { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .case summary { font-size: 18px; padding: 18px; }
+      .case-content { padding: 18px; }
+    }
+    @media print {
+      .nav, .hero-actions, .cta-row { display: none !important; }
+      body { background: #fff; color: #111; }
+      .panel, .case, .figure { box-shadow: none; border-color: #ddd; background: #fff; color: #111; }
+      .lead, .section-copy, .project-body p, .case-text p, .case-text li, .timeline-item p, .timeline-item li { color: #333; }
+      section { padding: 32px 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="Talha Sajid Portfolio Home"><span class="brand-mark">TS</span><span>Talha Sajid</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">CFD • Computational Mechanics • Scientific Computing</span>
+          <h1>Talha Sajid <span>CFD Engineer</span></h1>
+          <p class="lead">CFD Engineer with a Master’s degree in Applied Computational Mechanics and an MPhil in Mathematics, focused on computational fluid dynamics, mathematical modeling, numerical methods, simulation, and engineering data analysis.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="assets/reports/talha_sajid_cv.pdf" download>Download CV</a>
+            <a class="btn btn-ghost" href="mailto:talhasajid.maths@gmail.com">Contact Me</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Profile photo and profile highlights">
+          <div class="profile-frame"><img src="assets/images/talha_sajid_profile.png" alt="Talha Sajid professional portrait" /></div>
+          <div class="hero-metrics">
+            <div class="metric"><strong>CFD</strong><span>Fluent & OpenFOAM</span></div>
+            <div class="metric"><strong>3.8/4.0</strong><span>Research Master CGPA</span></div>
+            <div class="metric"><strong>7</strong><span>Documented technical projects</span></div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-kicker">About</div><h2>Simulation-focused engineering profile</h2></div>
+        </div>
+        <div class="about-grid">
+          <article class="panel about-card">
+            <p>I am a CFD Engineer with a Research Master of Applied Computational Mechanics from Skolkovo Institute of Science and Technology and an MPhil in Mathematics from Government College University Lahore. My work combines computational fluid dynamics, heat and mass transfer, turbulence-related behavior, mathematical modeling, numerical methods, simulation, and engineering data analysis.</p>
+            <p>My recent projects include supersonic reactive and non-reactive flow around a heated cylinder, finite-volume shock-wave modeling, Dynamic Mode Decomposition with Control, thin-film and boundary-layer analysis, iterative solution of elliptic PDEs, ODE-based engineering simulations, and analytical coolant-flow modeling for automobile radiator tubes.</p>
+            <div class="tag-cloud">
+              <span class="tag">Compressible CFD</span><span class="tag">Heat Transfer</span><span class="tag">Reactive Flow</span><span class="tag">Finite Volume Methods</span><span class="tag">OpenFOAM</span><span class="tag">ANSYS Fluent</span><span class="tag">Python</span><span class="tag">Numerical Modeling</span>
+            </div>
+          </article>
+          <aside class="panel about-card">
+            <div class="info-list">
+              <div class="info-row"><small>Location</small><strong>Lahore, Pakistan</strong></div>
+              <div class="info-row"><small>Email</small><strong><a href="mailto:talhasajid.maths@gmail.com">talhasajid.maths@gmail.com</a></strong></div>
+              <div class="info-row"><small>Phone</small><strong>+92 304 4229431</strong></div>
+              <div class="info-row"><small>Target roles</small><strong>CFD Engineer, R&amp;D Engineer, Simulation Engineer</strong></div>
+              <div class="info-row"><small>Languages</small><strong>English C1 · Urdu Native</strong></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-kicker">Technical skills</div><h2>Tools and capabilities</h2></div>
+        </div>
+        <div class="skills-grid">
+          <div class="panel skill-card"><h3>CFD & Simulation</h3><p>Compressible flow, supersonic flow, heat and mass transfer, turbulence modeling, multiphase-flow research focus, reactive and non-reactive flow analysis, biogas-system simulation support.</p></div>
+          <div class="panel skill-card"><h3>CFD Solvers</h3><p>ANSYS Fluent, OpenFOAM, finite-volume methods, density-based compressible solver setup, shock-capturing comparisons, HLLC and Lax–Friedrichs benchmarking.</p></div>
+          <div class="panel skill-card"><h3>CAD / Engineering Tools</h3><p>SolidWorks, Abaqus, AutoCAD, MUFiT, model setup, mesh preparation, solver execution, post-processing, and simulation reporting.</p></div>
+          <div class="panel skill-card"><h3>Programming & Data</h3><p>Python, MATLAB, C++, C, Java, NumPy, SciPy, Pandas, Matplotlib, PyTorch, TensorFlow, OpenCV, SVD, low-rank modeling, trajectory reconstruction.</p></div>
+          <div class="panel skill-card"><h3>Numerical Methods</h3><p>Finite difference methods, SOR, Conjugate Gradient, RK4, RK2, Euler, Adams-Bashforth, Leapfrog, Laplace transform, finite Hankel transform.</p></div>
+          <div class="panel skill-card"><h3>Documentation</h3><p>LaTeX, Jupyter, Git/GitHub, Linux, VS Code, technical reports, research presentations, project documentation, and clear engineering communication.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-kicker">Projects</div><h2>Engineering case studies</h2></div>
+        </div>
+        <div class="project-grid">
+          <article class="panel project-card">
+            <div class="project-image"><img src="assets/images/cover_heated_cylinder.png" alt="Reactive Mach 4 cylinder contours from thesis" /><span class="project-badge">CFD Thesis</span></div>
+            <div class="project-body"><h3>Supersonic Reactive & Non-Reactive Flow Around a Heated Cylinder</h3><p>Two-dimensional CFD study of Mach 2–4 flow around heated circular cylinders using ANSYS Fluent and OpenFOAM.</p><div class="meta"><span>ANSYS Fluent</span><span>OpenFOAM</span><span>RANS k–ω SST</span><span>Hydrogen–air</span></div><a class="btn btn-ghost" href="assets/reports/master_thesis_heated_cylinder.pdf">View Thesis</a></div>
+          </article>
+          <article class="panel project-card">
+            <div class="project-image"><img src="assets/images/cover_shock_wave.png" alt="Lax-Friedrichs and HLLC comparison plots" /><span class="project-badge">Finite Volume</span></div>
+            <div class="project-body"><h3>Shock-Wave Interactions in a Heated 1D Domain</h3><p>Finite-volume modeling of a right-moving shock interacting with a heated region in a 1D ideal gas.</p><div class="meta"><span>Euler equations</span><span>HLLC</span><span>Lax–Friedrichs</span><span>Exact Riemann solution</span></div><a class="btn btn-ghost" href="assets/reports/shock_wave_heated_1d.pdf">View Report</a></div>
+          </article>
+          <article class="panel project-card">
+            <div class="project-image"><img src="assets/images/cover_dmdc.png" alt="Improved DMDc system reconstruction outputs" /><span class="project-badge">Data-driven Modeling</span></div>
+            <div class="project-body"><h3>Improved Dynamic Mode Decomposition with Control</h3><p>Python-based DMDc implementation for Lorenz and Lotka–Volterra systems with SVD, modes, eigenvalues, and reconstruction.</p><div class="meta"><span>Python</span><span>SciPy</span><span>SVD</span><span>DMDc</span></div><a class="btn btn-ghost" href="assets/reports/dmdc_dynamic_systems.pdf">View Report</a></div>
+          </article>
+          <article class="panel project-card">
+            <div class="project-image"><img src="assets/images/cover_thin_film.png" alt="Thin-film similarity profiles" /><span class="project-badge">Fluid Mechanics</span></div>
+            <div class="project-body"><h3>Thin-Film Spreading & Laminar Boundary Layers</h3><p>Analysis of Reynolds lubrication, similarity solutions, Blasius boundary-layer profile, and flat-plate drag.</p><div class="meta"><span>Similarity solutions</span><span>Blasius</span><span>Boundary layer</span><span>Drag</span></div><a class="btn btn-ghost" href="assets/reports/fluid_mechanics_problem_set.pdf">View Report</a></div>
+          </article>
+          <article class="panel project-card">
+            <div class="project-image"><img src="assets/images/cover_poisson.png" alt="SOR and CG convergence figure and performance table" /><span class="project-badge">Elliptic PDE</span></div>
+            <div class="project-body"><h3>Iterative Numerical Modeling of 2D Elliptic PDEs</h3><p>Finite-difference solution of a 2D Poisson equation with SOR and Conjugate Gradient convergence comparison.</p><div class="meta"><span>Finite difference</span><span>SOR</span><span>CG</span><span>Second-order accuracy</span></div><a class="btn btn-ghost" href="assets/reports/poisson_pde_sor_cg_project.pdf">View Report</a></div>
+          </article>
+          <article class="panel project-card">
+            <div class="project-image"><img src="assets/images/cover_ode_systems.png" alt="Predator-prey numerical method plots" /><span class="project-badge">ODE Systems</span></div>
+            <div class="project-body"><h3>Numerical Methods for ODE-Based Engineering Systems</h3><p>RK4, Adams-Bashforth, Leapfrog, Euler, and RK2 methods applied to ice growth, predator-prey dynamics, and nonlinear ODE problems.</p><div class="meta"><span>RK4</span><span>Leapfrog</span><span>Adams-Bashforth</span><span>Dynamical systems</span></div><a class="btn btn-ghost" href="assets/reports/numerical_methods_ode_project.pdf">View Report</a></div>
+          </article>
+          <article class="panel project-card">
+            <div class="project-image"><img src="assets/images/cover_coolant.png" alt="Ethylene glycol coolant velocity graph" /><span class="project-badge">MPhil Thesis</span></div>
+            <div class="project-body"><h3>Coolant Flow in Automobile Radiator Tubes</h3><p>Analytical heat and mass transfer modeling of coolant flow in cylindrical radiator tubes using Laplace and finite Hankel transforms.</p><div class="meta"><span>Mathematical modeling</span><span>Laplace transform</span><span>Hankel transform</span><span>Coolant flow</span></div><a class="btn btn-ghost" href="assets/reports/mphil_coolant_radiator.pdf">View Thesis</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-kicker">Experience</div><h2>Work experience</h2></div></div>
+        <div class="timeline">
+          <article class="panel timeline-item"><div class="time">Jan. 2026 – May 2026</div><div><h3>Computational Engineer · Tekvel</h3><p>Moscow, Russia</p><ul><li>Supported engineering research through computational modeling, process-control analysis, and simulation-based evaluation of technical systems.</li><li>Applied numerical methods to study fluid-flow, heat-transfer, and mass-transfer behavior for process performance and engineering optimization.</li></ul></div></article>
+          <article class="panel timeline-item"><div class="time">Apr. 2025 – Oct. 2025</div><div><h3>CFD Engineer · Eco Energy LLC</h3><p>Moscow, Russia · Hybrid</p><ul><li>Performed CFD simulations and numerical modeling to support renewable energy research focused on biogas systems.</li><li>Collaborated with the research team to analyze flow behavior, thermal performance, and engineering parameters for sustainable energy applications.</li></ul></div></article>
+          <article class="panel timeline-item"><div class="time">Mar. 2022 – Sep. 2024</div><div><h3>Trainee Engineer · Automate Engineering And Services</h3><p>Lahore, Pakistan</p><ul><li>Investigated computational analysis and CFD simulations for engineering systems, focusing on fluid flow, heat transfer, and performance optimization.</li><li>Supported project teams through model setup, mesh preparation, solver execution, post-processing, and clear reporting of simulation results.</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-kicker">Education & achievements</div><h2>Academic background</h2></div></div>
+        <div class="timeline">
+          <article class="panel timeline-item"><div class="time">Sep. 2024 – Jun. 2026</div><div><h3>Research Master of Applied Computational Mechanics</h3><p>Skolkovo Institute of Science and Technology, Moscow, Russia · CGPA: 3.8/4.0</p><p>Research focus: CFD, heat and mass transfer, multiphase flow, turbulence modeling, numerical simulation, mathematical modeling, and engineering applications in industrial systems and renewable energy.</p></div></article>
+          <article class="panel timeline-item"><div class="time">Nov. 2021 – Dec. 2023</div><div><h3>MPhil in Mathematics</h3><p>Government College University Lahore, Pakistan</p><p>Academic focus: Nonlinear Systems, Numerical Methods for PDEs, Special Functions, Chaos Theory, and Mathematical Modeling.</p></div></article>
+          <article class="panel timeline-item"><div class="time">Nov. 2017 – Jun. 2021</div><div><h3>BS in Mathematics</h3><p>University of the Punjab, Lahore, Pakistan</p><p>Academic focus: Calculus I and II, ODEs and PDEs, Complex Analysis, Numerical Methods, Computational Mathematics, and Statistics.</p></div></article>
+          <article class="panel timeline-item"><div class="time">Awards</div><div><h3>Scholarships</h3><ul><li>Skoltech Merit Scholarship, Skolkovo Institute of Science and Technology, Sep. 2024 – Jun. 2026.</li><li>Special Person Merit Scholarship, University of the Punjab, Nov. 2017 – Jun. 2021.</li></ul></div></article>
+          <article class="panel timeline-item"><div class="time">Conferences</div><div><h3>Research presentations and participation</h3><ul><li>Research presentation: Mathematical Modeling of Coolant Flow in Automobile Radiator Tubes, iCoMET, Sukkur IBA University, Feb. 2023.</li><li>Workshop Participation: Advancements in Mathematics and Its Applications, Riphah International University, May 2023.</li><li>Conference Participation: Mathematical Modeling and Scientific Computing for Industrial Research, Abdus Salam School of Mathematical Sciences, Nov. 2022.</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-kicker">Contact</div><h2>Let’s discuss CFD and simulation opportunities</h2></div></div>
+        <div class="contact-grid contact-single">
+          <article class="panel contact-card">
+            <h3>Contact details</h3>
+            <p><strong>Email:</strong> <a href="mailto:talhasajid.maths@gmail.com">talhasajid.maths@gmail.com</a></p>
+            <p><strong>Phone:</strong> +92 304 4229431</p>
+            <p><strong>Location:</strong> Lahore, Pakistan</p>
+            <div class="cta-row"><a class="btn btn-primary" href="mailto:talhasajid.maths@gmail.com">Email Me</a><a class="btn btn-secondary" href="assets/reports/talha_sajid_cv.pdf" download>Download CV</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© Talha Sajid · CFD Engineer Portfolio</div>
+  </footer>
+</body>
+</html>

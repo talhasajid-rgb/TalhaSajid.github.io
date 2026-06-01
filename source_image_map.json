@@ -1,0 +1,177 @@
+{
+  "original_source_image_map": [
+    {
+      "file": "assets/images/master_domain_geometry.jpg",
+      "source_pdf": "Talha_Master's_Thesis.pdf",
+      "page": 26,
+      "description": "Master thesis p.26: computational domain and cylinder geometry"
+    },
+    {
+      "file": "assets/images/master_structured_meshes.jpg",
+      "source_pdf": "Talha_Master's_Thesis.pdf",
+      "page": 27,
+      "description": "Master thesis p.27: final structured meshes for 3, 4, 5 cm cylinders"
+    },
+    {
+      "file": "assets/images/master_reactive_mach4_5cm_contours.jpg",
+      "source_pdf": "Talha_Master's_Thesis.pdf",
+      "page": 96,
+      "description": "Master thesis p.96: reactive Mach 4 velocity and temperature contours for 5 cm cylinder"
+    },
+    {
+      "file": "assets/images/master_reactive_5cm_graphical_comparison.jpg",
+      "source_pdf": "Talha_Master's_Thesis.pdf",
+      "page": 99,
+      "description": "Master thesis p.99: 5 cm cylinder graphical comparison and shock stand-off variation"
+    },
+    {
+      "file": "assets/images/mphil_coolant_model_equations.jpg",
+      "source_pdf": "Talha's Mphil Thesis..pdf",
+      "page": 30,
+      "description": "MPhil thesis p.30: nondimensionalization and model equations"
+    },
+    {
+      "file": "assets/images/mphil_ethyleneglycol_velocity.jpg",
+      "source_pdf": "Talha's Mphil Thesis..pdf",
+      "page": 40,
+      "description": "MPhil thesis p.40: velocity change over time for ethylene glycol"
+    },
+    {
+      "file": "assets/images/mphil_coolant_temperature.jpg",
+      "source_pdf": "Talha's Mphil Thesis..pdf",
+      "page": 45,
+      "description": "MPhil thesis p.45: temperature variation for diethylene glycol"
+    },
+    {
+      "file": "assets/images/mphil_coolant_concentration.jpg",
+      "source_pdf": "Talha's Mphil Thesis..pdf",
+      "page": 48,
+      "description": "MPhil thesis p.48: concentration variation for diethylene glycol"
+    },
+    {
+      "file": "assets/images/shock_initial_conditions.jpg",
+      "source_pdf": "Project_Report_Talha.pdf",
+      "page": 7,
+      "description": "Shock-wave report p.7: initial states for thermal Riemann problem"
+    },
+    {
+      "file": "assets/images/shock_exact_solution_profiles.jpg",
+      "source_pdf": "Project_Report_Talha.pdf",
+      "page": 11,
+      "description": "Shock-wave report p.11: exact solution profiles"
+    },
+    {
+      "file": "assets/images/shock_lf_hllc_comparison_density_velocity_pressure.jpg",
+      "source_pdf": "Project_Report_Talha.pdf",
+      "page": 19,
+      "description": "Shock-wave report p.19: density, velocity and pressure comparison"
+    },
+    {
+      "file": "assets/images/shock_lf_hllc_comparison_temperature_mach.jpg",
+      "source_pdf": "Project_Report_Talha.pdf",
+      "page": 20,
+      "description": "Shock-wave report p.20: temperature and Mach comparison"
+    },
+    {
+      "file": "assets/images/dmdc_original_systems.jpg",
+      "source_pdf": "Project__Report.pdf",
+      "page": 3,
+      "description": "DMDc report p.3: original Lotka–Volterra and Lorenz outputs"
+    },
+    {
+      "file": "assets/images/dmdc_improved_method.jpg",
+      "source_pdf": "Project__Report.pdf",
+      "page": 4,
+      "description": "DMDc report p.4: improved DMDc outputs"
+    },
+    {
+      "file": "assets/images/dmdc_alternative_systems.jpg",
+      "source_pdf": "Project__Report.pdf",
+      "page": 5,
+      "description": "DMDc report p.5: altered system results"
+    },
+    {
+      "file": "assets/images/ffm_thin_film_similarity.jpg",
+      "source_pdf": "Talha_FFM_PSET_3.pdf",
+      "page": 5,
+      "description": "Fluid mechanics p.5: thin-film similarity profiles"
+    },
+    {
+      "file": "assets/images/ffm_blasius_profile.jpg",
+      "source_pdf": "Talha_FFM_PSET_3.pdf",
+      "page": 12,
+      "description": "Fluid mechanics p.12: Blasius velocity profile"
+    },
+    {
+      "file": "assets/images/ffm_drag_ratio.jpg",
+      "source_pdf": "Talha_FFM_PSET_3.pdf",
+      "page": 16,
+      "description": "Fluid mechanics p.16: flat-plate drag-force ratio"
+    },
+    {
+      "file": "assets/images/cp2_ice_growth_rk4.jpg",
+      "source_pdf": "SAJID_TALHA_CP2.pdf",
+      "page": 5,
+      "description": "Class Project 02 p.5: ice-growth RK4 result"
+    },
+    {
+      "file": "assets/images/cp2_predator_prey_case_a.jpg",
+      "source_pdf": "SAJID_TALHA_CP2.pdf",
+      "page": 11,
+      "description": "Class Project 02 p.11: predator-prey case a phase plots"
+    },
+    {
+      "file": "assets/images/cp2_predator_prey_case_b.jpg",
+      "source_pdf": "SAJID_TALHA_CP2.pdf",
+      "page": 12,
+      "description": "Class Project 02 p.12: predator-prey case b phase plots"
+    },
+    {
+      "file": "assets/images/poisson_problem_formulation.jpg",
+      "source_pdf": "Talha_CP_Final.pdf",
+      "page": 2,
+      "description": "CP Final p.2: 2D Poisson equation formulation and finite-difference stencil"
+    },
+    {
+      "file": "assets/images/poisson_sor_cg_convergence.jpg",
+      "source_pdf": "Talha_CP_Final.pdf",
+      "page": 5,
+      "description": "CP Final p.5: SOR/CG error plot and performance table"
+    }
+  ],
+  "updated_cover_images": {
+    "cover_coolant.png": {
+      "source_uploaded_file": "Coolant Flow in Automobile Radiator Tubes.png",
+      "used_in": "Engineering case study card cover"
+    },
+    "cover_dmdc.png": {
+      "source_uploaded_file": "Improved Dynamic Mode Decomposition with Control.png",
+      "used_in": "Engineering case study card cover"
+    },
+    "cover_poisson.png": {
+      "source_uploaded_file": "Iterative Numerical Modeling of 2D Elliptic PDEs.png",
+      "used_in": "Engineering case study card cover"
+    },
+    "cover_ode_systems.png": {
+      "source_uploaded_file": "Numerical Methods for ODE-Based Engineering Systems.png",
+      "used_in": "Engineering case study card cover"
+    },
+    "cover_shock_wave.png": {
+      "source_uploaded_file": "Shock-Wave Interactions in a Heated 1D Domain.png",
+      "used_in": "Engineering case study card cover"
+    },
+    "cover_heated_cylinder.png": {
+      "source_uploaded_file": "Supersonic Reactive & Non-Reactive Flow Around a Heated Cylinder.png",
+      "used_in": "Engineering case study card cover"
+    },
+    "cover_thin_film.png": {
+      "source_uploaded_file": "Thin-Film Spreading & Laminar Boundary Layers.png",
+      "used_in": "Engineering case study card cover"
+    }
+  },
+  "updated_cv": {
+    "source_uploaded_file": "Talha_Sajid_CV .pdf",
+    "used_in": "Download CV buttons and assets/reports/talha_sajid_cv.pdf"
+  },
+  "removed_section": "Technical breakdowns / detailed project accordions were removed per user request."
+}
